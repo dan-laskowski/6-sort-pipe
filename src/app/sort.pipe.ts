@@ -2,12 +2,22 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'sort',
-  standalone: true
+  standalone: true,
 })
 export class SortPipe implements PipeTransform {
+  transform(array: any, type: string = 'asc'): any {
+    if (!Array.isArray(array)) throw new Error('Value to sort isn’t an array');
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+    switch (type) {
+      case 'asc':
+        return array.sort();
+        break;
+      case 'desc':
+        return array.sort().reverse();
+        break;
+      default:
+        return array;
+        break;
+    }
   }
-
 }

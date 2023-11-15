@@ -1,0 +1,26 @@
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  margin-top: 6px;
+  margin-bottom: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+p span {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.error {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: red;
+  font-size: 0.75rem;
+}
